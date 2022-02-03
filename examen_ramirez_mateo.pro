@@ -10,13 +10,18 @@ CONFIG += c++11
 
 SOURCES += \
     main.cpp \
-    imc.cpp
+    imc.cpp \
+    resultados.cpp
 
 HEADERS += \
-    imc.h
+    imc.h \
+    resultados.h
 
 FORMS += \
     imc.ui
+
+TRANSLATIONS = \
+imc_ru.ts
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
