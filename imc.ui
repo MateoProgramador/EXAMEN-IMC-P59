@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>IMC</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="Recursos.qrc">
+    <normaloff>:/Resource/escala-de-peso.png</normaloff>:/Resource/escala-de-peso.png</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
@@ -413,6 +417,8 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="Recursos.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>imc_ru.qm</file>
+        <file>Resource/escala-de-peso.png</file>
+    </qresource>
+</RCC>

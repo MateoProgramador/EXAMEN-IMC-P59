@@ -27,3 +27,10 @@ imc_ru.ts
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    Recursos.qrc
+
+DISTFILES += \
+    Resource/escala-de-peso.png \
+    imc_ru.qm

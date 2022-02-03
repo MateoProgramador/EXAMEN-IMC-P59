@@ -35,23 +35,20 @@ void IMC::obtencionDatos()
 
 void IMC::guardarArchivo()
 {
-    print();
-    QFile archivo(name);
+    QString ara = "";
+    foreach (resultados *a,m_datos){
+        ara += a->peso()+ "|" + a->fecha() + "|" + QString::number(a->estatura(),'f',2)+"\n";
+
+    }
+    QFile archivo("../datos.txt");
     if(archivo.open(QFile::WriteOnly)){
-        archivo.write(printed.toUtf8());
+        archivo.write(ara.toUtf8());
     }
     else{
-        QMessageBox::warning(this,"Guardar archivo","Lamentablemente no se pudo guardar");
+        ui->statusbar->showMessage("No se pudo guardar el archivo",5000);
     }
     archivo.close();
 }
-void resultados::print()
-{
-    QString data = "";
-
-}
-
-
 
 
 void IMC::on_btnCalcular_released()
@@ -65,6 +62,7 @@ void IMC::on_btnCalcular_released()
     obtencionDatos();
     ui->inPesomaximo->setText((m_datos.at(m_datos.length()-1)->peso()) + " kg");
     ui->inPesominimo->setText((m_datos.at(0)->peso()) + " kg");
+    guardarArchivo();
 
 
 
